@@ -1,0 +1,14 @@
+.git
+.env
+.env.*
+!.env.example
+.portal-port
+node_modules
+CleanCity AI (Portable)/.env.local
+CleanCity AI (Portable)/*.exe
+CleanCity AI (Portable)/*.dll
+CleanCity AI (Portable)/*.pak
+CleanCity AI (Portable)/*.bin
+CleanCity AI (Portable)/locales
+CleanCity AI (Portable)/resources/app/node_modules
+CleanCity AI Setup 1.0.0.exe
