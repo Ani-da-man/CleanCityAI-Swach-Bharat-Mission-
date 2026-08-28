@@ -1,0 +1,12 @@
+{
+  "name": "swachh-bharat-urban-poc",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Reviewer-safe web deployment for the Swachh Bharat Urban hackathon POC",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node portal-host.cjs"
+  }
+}
