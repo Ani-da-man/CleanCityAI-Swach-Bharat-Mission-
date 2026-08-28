@@ -24,7 +24,14 @@ function loadEnvFile(filePath) {
 // The packaged server is self-contained; production mode avoids attempting to
 // load the optional Vite development middleware from node_modules.
 process.env.NODE_ENV = 'production';
-const distServer = path.join(__dirname, 'CleanCity AI (Portable)', 'resources', 'app', 'dist', 'server.cjs');
+const serverCandidates = [
+  path.join(__dirname, 'dist', 'server.cjs'),
+  path.join(__dirname, 'CleanCity AI (Portable)', 'resources', 'app', 'dist', 'server.cjs'),
+];
+const distServer = serverCandidates.find((candidate) => fs.existsSync(candidate));
+if (!distServer) {
+  throw new Error(`Server bundle not found. Expected one of:\n${serverCandidates.join('\n')}`);
+}
 loadEnvFile(path.join(__dirname, 'CleanCity AI (Portable)', '.env.local'));
 loadEnvFile(path.join(__dirname, '.env.local'));
 const { startServer } = require(distServer);

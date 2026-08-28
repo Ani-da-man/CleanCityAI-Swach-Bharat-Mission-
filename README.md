@@ -20,6 +20,8 @@ docker compose up --build
 
 ## Public deployment
 
-See [DEPLOY.md](DEPLOY.md). The recommended reviewer build is a public Render web service generated from `render.yaml`.
+See [DEPLOY.md](DEPLOY.md). The recommended reviewer build is a public Render Node web service generated from `render.yaml`; it avoids Docker cache/build issues.
 
 This is an independent prototype, not an official government service. It uses synthetic dashboard data and does not connect to live government systems.
+
+For Render, upload this folder's contents—not the ZIP itself—as the repository contents. The server bundle is in `dist/` at the repository root.
