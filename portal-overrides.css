@@ -1,0 +1,45 @@
+/* Swachh Bharat Urban visual refresh — layered on top of the original build. */
+:root {
+  --sbu-ink: #102f2d;
+  --sbu-green: #0f766e;
+  --sbu-green-bright: #159a78;
+  --sbu-saffron: #e88928;
+  --sbu-cream: #fbfaf6;
+  --sbu-line: rgba(16, 47, 45, .11);
+}
+html, body, #root { min-height: 100%; }
+body { background: var(--sbu-cream) !important; color: var(--sbu-ink) !important; font-family: Inter, "Noto Sans Devanagari", system-ui, sans-serif !important; }
+body::before { content: ""; position: fixed; z-index: 5000; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg, #e88928 0 33.33%, #fff 33.33% 66.66%, #159a78 66.66%); pointer-events: none; }
+aside { background: linear-gradient(180deg, #123b38 0%, #0d2928 100%) !important; border-color: rgba(255,255,255,.1) !important; box-shadow: 10px 0 32px rgba(10, 38, 36, .13); }
+aside > div:first-child { border-color: rgba(255,255,255,.12) !important; padding: 1.35rem 1.3rem !important; }
+aside .text-emerald-600 { color: #f4b35e !important; }
+aside .text-emerald-600 span { font-size: 0 !important; }
+aside .text-emerald-600 span::after { content: "Swachh Bharat"; font-size: 1.08rem; letter-spacing: -.02em; }
+aside .text-slate-400 { color: rgba(230,247,240,.58) !important; }
+aside nav { padding: 1rem .8rem !important; }
+aside nav button { color: rgba(235,249,243,.72) !important; border-radius: 12px !important; margin: 3px 0; transition: background .2s ease, transform .2s ease, color .2s ease; }
+aside nav button:hover { color: #fff !important; background: rgba(255,255,255,.09) !important; transform: translateX(2px); }
+aside nav button[class*="bg-emerald-50"] { color: #123b38 !important; background: linear-gradient(100deg, #f4b35e, #f6cc83) !important; box-shadow: 0 8px 18px rgba(0,0,0,.13); }
+aside > div:last-child { border-color: rgba(255,255,255,.12) !important; }
+aside > div:last-child > div { background: rgba(255,255,255,.08) !important; border-color: rgba(255,255,255,.12) !important; }
+aside > div:last-child .text-slate-500 { color: rgba(230,247,240,.58) !important; }
+aside > div:last-child .bg-emerald-100 { background: #f4b35e !important; color: #123b38 !important; }
+main { background: radial-gradient(circle at 85% 0%, rgba(221,239,226,.58), transparent 34%), var(--sbu-cream) !important; }
+main > header { height: 4.6rem !important; background: rgba(255,255,255,.88) !important; border-color: var(--sbu-line) !important; backdrop-filter: blur(16px); box-shadow: 0 1px 0 rgba(16,47,45,.04); }
+main > header::after { content: "राष्ट्रीय स्वच्छता मिशन  •  URBAN"; color: #6d817c; font-size: .62rem; letter-spacing: .13em; font-weight: 700; position: absolute; left: 50%; transform: translateX(-50%); top: 6px; opacity: .78; }
+main > header h2 { color: var(--sbu-ink) !important; font-weight: 750 !important; letter-spacing: -.02em; }
+main > header input { background: #f1f6f3 !important; border-color: transparent !important; border-radius: 999px !important; min-width: 190px; }
+main > header input:focus { background: #fff !important; box-shadow: 0 0 0 3px rgba(21,154,120,.15); }
+main section [class*="rounded-2xl"], main section [class*="rounded-xl"], main > div [class*="rounded-2xl"] { border-color: var(--sbu-line) !important; box-shadow: 0 10px 28px rgba(24,68,59,.06) !important; }
+main section [class*="bg-white"], main > div [class*="bg-white"] { background: rgba(255,255,255,.9) !important; }
+main section h1, main section h2, main section h3 { color: var(--sbu-ink) !important; letter-spacing: -.025em; }
+main [class*="bg-emerald-600"], main [class*="bg-emerald-500"] { background: linear-gradient(135deg, #117c70, #159a78) !important; }
+main button[class*="bg-emerald"], main a[class*="bg-emerald"] { box-shadow: 0 7px 15px rgba(15,118,110,.2); }
+main [class*="text-emerald-600"], main [class*="text-emerald-700"] { color: var(--sbu-green) !important; }
+main [class*="border-emerald"] { border-color: rgba(21,154,120,.28) !important; }
+main [class*="bg-emerald-50"] { background: #edf8f2 !important; }
+main input, main textarea, main select { border-radius: 12px !important; border-color: var(--sbu-line) !important; }
+main input:focus, main textarea:focus, main select:focus { box-shadow: 0 0 0 3px rgba(21,154,120,.14) !important; }
+.leaflet-container { border-radius: 16px; filter: saturate(.82) contrast(.98); }
+main [class*="bg-gradient-to-br"] { box-shadow: 0 16px 30px rgba(135,77,23,.16) !important; }
+@media (max-width: 700px) { main > header::after { display: none; } main > header input { min-width: 0; width: 130px; } }
